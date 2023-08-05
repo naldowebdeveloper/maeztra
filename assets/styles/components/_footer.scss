@@ -1,0 +1,145 @@
+/* ======================================
+Footer
+========================================= */
+footer {
+  margin-top: 80px;
+
+  .footer {
+    &__infos {
+      color: $white;
+      background-color: $color02;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0;
+        align-items: center;
+
+        @include bkp("mobile") {
+          flex-direction: column;
+        }
+      }
+
+      &--assinaturas,
+      &--bandeiras,
+      &--redesSocias {
+        margin-bottom: 30px;
+
+        ul {
+          display: flex;
+        }
+      }
+
+      &--redesSocias {
+        ul {
+          align-items: center;
+
+          li {
+            margin-right: 20px;
+          }
+        }
+      }
+
+      &--bandeiras {
+        li {
+          margin: 0 10px;
+        }
+      }
+
+      &--assinaturas {
+        li {
+          display: flex;
+          flex-direction: column;
+
+          &:first-child {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+    &__newsletter,
+    &__menus {
+      .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+
+        @include bkp("mobile") {
+          flex-direction: column;
+        }
+      }
+    }
+    &__menus {
+      margin: 40px 0;
+      
+      .container {
+        @include bkp("mobile") {
+          text-align: center;
+        }
+      }
+
+      ul {
+        @include bkp("mobile") {
+          margin-bottom: 20px;
+        }
+      }
+
+      li {
+        margin-top: 25px;
+      }
+      a {
+        color: $black;
+      }
+    }
+
+    &__newsletter {
+      border-top: 2px solid $color03;
+      border-bottom: 2px solid $color03;
+      padding: 40px 0;
+
+      &__title {
+        @include bkp("mobile") {
+          margin-bottom: 20px;
+        }
+      }
+
+      .container {
+        @include bkp("mobile") {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      form {
+        width: 90%;
+        display: flex;
+        justify-content: end;
+        
+        @include bkp("desktop") {
+          width: 70%;
+        }
+      }
+      &__box {
+        width: 100%;
+        max-width: 630px;
+        height: 40px;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 3px;
+
+        input {
+          width: 100%;
+          height: 100%;
+          padding: 10px 20px;
+        }
+      }
+      button {
+        width: 130px;
+        height: 40px;
+        background-color: #faa500;
+        color: #fff;
+        border-radius: 3px;
+        margin-left: -10px;
+      }
+    }
+  }
+}

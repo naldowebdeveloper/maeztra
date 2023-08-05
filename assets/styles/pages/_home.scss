@@ -1,0 +1,99 @@
+/* ======================================
+Home
+========================================= */
+
+main {
+  @include bkp("mobile") {
+  }
+
+  @include bkp("desktop") {
+  }
+
+  h3,
+  h2 {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .marcas-parceiras,
+  .porque-comprar {
+    .swiper-wrapper {
+      .swiper-slide {
+        display: -webkit-inline-box;
+        width: 307px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .banner {
+    text-align: center;
+
+    @include bkp("desktop") {
+      height: 600px;
+    }
+  }
+
+  .porque-comprar {
+    margin: 25px 0 80px;
+
+    h3 {
+      margin-bottom: 15px;
+    }
+    .swiper-slide {
+      background-color: $color03;
+      padding: 10px 20px;
+
+      strong {
+        display: block;
+      }
+
+      span {
+        font-size: 12px;
+      }
+
+      img {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .marcas-parceiras {
+    margin: 80px 0;
+  }
+
+  .sobre {
+    align-items: center;
+    margin-top: 80px;
+
+    @include bkp("mobile") {
+      flex-direction: column;
+      padding: 0 10%;
+    }
+
+    &__text {
+      @include bkp("desktop") {
+        width: 30%;
+        padding-right: 5%;
+      }
+
+      strong {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    }
+    &__image {
+      @include bkp("mobile") {
+        margin-top: 25x;
+      }
+
+      @include bkp("desktop") {
+        width: 70%;
+      }
+    }
+  }
+}

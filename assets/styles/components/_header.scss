@@ -1,0 +1,123 @@
+/* ======================================
+Header
+========================================= */
+
+header {
+  .tipBar {
+    width: 100%;
+    background-color: #353535;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0;
+  }
+}
+
+.header {
+  &__content {
+    background-color: $white;
+    &--top {
+      box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
+      padding: 20px 0;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include bkp("mobile") {
+          flex-direction: column;
+        }
+      }
+
+      .logo {
+        span {
+          display: none;
+        }
+      }
+
+      .search {
+        width: 100%;
+        max-width: 800px;
+
+        @include bkp("mobile") {
+          display: none;
+        }
+
+        form {
+          display: flex;
+
+          input {
+            width: 100%;
+            height: 100%;
+            padding: 10px 20px;
+          }
+          button {
+            margin-left: -10px;
+          }
+        }
+        &__box {
+          background-color: #efefef;
+          border-radius: 10px;
+          height: 40px;
+          width: 100%;
+        }
+        button {
+          display: flex;
+          width: 119px;
+          height: 40px;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          background-color: #faa500;
+          color: #fff;
+          border-radius: 5px;
+          text-align: center;
+        }
+      }
+
+      .infosHeader {
+        @include bkp("desktop") {
+          display: flex;
+        }
+
+        @include bkp("mobile") {
+          display: none;
+        }
+
+        a {
+          margin-left: 50px;
+          color: #353535;
+          display: flex;
+          align-items: center;
+
+          span {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    &--bottom {
+
+      @include bkp("mobile") {
+        display: none;
+      }
+      
+      ul {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+
+        @include bkp("mobile") {
+          flex-direction: column;
+        }
+        li {
+          margin: 0 40px;
+          a {
+            color: $color02;
+          }
+        }
+      }
+    }
+  }
+}

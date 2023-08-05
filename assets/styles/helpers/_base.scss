@@ -1,0 +1,106 @@
+/* ==========================================================================
+    Base Classes
+    ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input {
+  border: none;
+  background-color: transparent;
+}
+
+.mod,
+.desk {
+  display: none;
+}
+
+#main-wrapper {
+  @include bkp("desktop") {
+    .desk {
+      display: block;
+    }
+    .mob {
+      display: none;
+    }
+  }
+
+  @include bkp("mobile") {
+    .mob {
+      display: block;
+    }
+    .desk {
+      display: none;
+    }
+  }
+}
+
+.-flex {
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+address {
+  font-style: normal;
+}
+
+p {
+  line-height: 18px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+body > svg:first-of-type {
+  display: none;
+}
+
+svg path {
+  fill: inherit;
+}
+
+/*
+      Base Style
+      ========================================================================== */
+
+a,
+strong,
+span {
+  display: inline-block;
+}
+
+body,
+html {
+  min-height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+body {
+  font-family: $font-rounded;
+  font-size: 14px;
+  font-weight: 400;
+  color: $black;
+  text-rendering: optimizeLegibility;
+  background-color: $color04;
+}
