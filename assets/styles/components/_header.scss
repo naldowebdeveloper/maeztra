@@ -17,21 +17,58 @@ header {
   &__content {
     background-color: $white;
     &--top {
+      @include bkp("desktop") {
       box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
-      padding: 20px 0;
+      }
       .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
         @include bkp("mobile") {
-          flex-direction: column;
+          padding: 35px 20px;
+          display: table;
+        }
+
+        @include bkp("desktop") {
+          padding: 20px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
         }
       }
 
       .logo {
+        @include bkp("mobile") {
+          float: left;
+        }
+
         span {
           display: none;
+        }
+      }
+
+      .menu-mob {
+        @include bkp("desktop") {
+          display: none;
+        }
+        
+        @include bkp("mobile") {
+          float: left;
+          margin: 5px 40px 0 0;
+        }
+      }
+
+      .infosMobile {
+        @include bkp("desktop") {
+          display: none;
+        }
+
+        @include bkp("mobile") {
+          float: right;
+          width: 25%;
+
+          ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
         }
       }
 
@@ -90,6 +127,16 @@ header {
           display: flex;
           align-items: center;
 
+          @include bkp("desktop") {
+            padding: 12px 14px 13px 17px;
+            border: 1px solid transparent;
+
+            &:hover {
+              border-radius: 8px;
+              border: 1px solid #faa500;
+            }
+          }
+
           span {
             margin-left: 5px;
           }
@@ -98,23 +145,39 @@ header {
     }
 
     &--bottom {
-
       @include bkp("mobile") {
         display: none;
       }
-      
+
       ul {
         display: flex;
-        justify-content: center;
-        padding: 15px 0;
+        justify-content: space-between;
+        padding: 20px 0 15px;
+        align-items: center;
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        align-items: end;
 
         @include bkp("mobile") {
           flex-direction: column;
         }
+
         li {
           margin: 0 40px;
+          padding: 0 5px;
+          display: flex;
+          width: 100%;
+          text-align: center;
+
           a {
             color: $color02;
+            width: 100%;
+
+            &:hover {
+              font-weight: 700;
+              color: #faa500;
+            }
           }
         }
       }

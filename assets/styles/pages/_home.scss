@@ -8,15 +8,20 @@ main {
 
   @include bkp("desktop") {
   }
+  .container {
+    h3,
+    h2 {
+      text-align: center;
+    }
 
-  h3,
-  h2 {
-    text-align: center;
-  }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
 
-  h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+      @include bkp("desktop") {
+        font-size: 32px;
+      }
+    }
   }
 
   .marcas-parceiras,
@@ -31,10 +36,7 @@ main {
   }
 
   .banner {
-    text-align: center;
-
     @include bkp("desktop") {
-      height: 600px;
     }
   }
 
@@ -42,7 +44,7 @@ main {
     margin: 25px 0 80px;
 
     h3 {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     .swiper-slide {
       background-color: $color03;
@@ -88,12 +90,86 @@ main {
     }
     &__image {
       @include bkp("mobile") {
-        margin-top: 25x;
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      img {
+        @include bkp("mobile") {
+          width: 100%;
+        }
       }
 
       @include bkp("desktop") {
         width: 70%;
       }
+    }
+  }
+}
+
+.vitrine {
+  .box {
+    width: 80%;
+    margin: 0 auto;
+
+    > * {
+      margin: 15px 0;
+      display: block;
+    }
+
+    .colors {
+      display: flex;
+      a {
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        margin-right: 10px;
+
+        &:hover {
+          border: 1px solid #000;
+        }
+
+        &.color1 {
+          background-color: #deac71;
+        }
+        &.color2 {
+          background-color: #d37164;
+        }
+
+        &.color3 {
+          background-color: #6497d3;
+        }
+        &.color4 {
+          background-color: #3c3b79;
+        }
+      }
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .title {
+      font-size: 16px;
+    }
+
+    .description {
+      font-size: 12px;
+      color: #939393;
+    }
+
+    .buy {
+      width: 254px;
+      height: 35px;
+      background-color: #faa500;
+      font-size: 16px;
+      text-align: center;
+      color: #fff;
+      line-height: 31px;
+      border-radius: 5px;
     }
   }
 }

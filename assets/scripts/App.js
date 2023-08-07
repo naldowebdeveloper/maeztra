@@ -24,10 +24,6 @@ class Main {
 
     var swiper = new Swiper(".mySwiper2", {
       slidesPerView: "auto",
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
       breakpoints: {
         640: {
           centeredSlides: true,
